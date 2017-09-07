@@ -12,7 +12,6 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class MainActivity extends Activity {
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -95,12 +94,12 @@ public class MainActivity extends Activity {
         });
 
         //显示一维条码
-        btn4.setOnClickListener(new OnClickListener() {
+        btn4.setOnClickListener(new OnClickListener() { //在主线程中改变UI
             @Override
             public void onClick(View view) {
                 showOneDCode();
             }
-        }); //在主线程中改变UI
+        });
     }
 
     //显示二维码一种方式
